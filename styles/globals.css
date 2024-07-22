@@ -2,12 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
+/* ダークモード設定 */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -16,16 +11,29 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* 教材のスタイル設定 */
+@layer base {
+  h1 {
+    @apply font-semibold leading-tight text-4xl mt-0 mb-2;
+  }
+  h2 {
+    @apply font-semibold leading-tight text-3xl mt-0 mb-2;
+  }
+  h3 {
+    @apply font-semibold leading-tight text-2xl mt-0 mb-2;
+  }
+  p {
+    @apply font-light leading-relaxed text-base text-gray-800 mt-0 mb-4;
+  }
 }
 
+@layer components {
+  main {
+    @apply min-h-screen flex flex-col justify-center items-center;
+  }
+}
+
+/* デフォルト設定のユーティリティ */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
