@@ -90,3 +90,5 @@ const Home: NextPage = () => {
 };
  
 export default Home;
+
+// 以上のコードは、コンポーネントを使用しない例を説明したものです。（教材の進行）
