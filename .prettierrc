@@ -8,13 +8,11 @@
   "arrowParens": "avoid",
   "endOfLine": "lf",
   "jsxSingleQuote": true,
-  "parser": "typescript",
   "overrides": [
     {
-      "files": "*.tsx",
+      "files": ["*.ts", "*.tsx", "*.mjs"],
       "options": {
-        "semi": true,
-        "singleQuote": false
+        "semi": true
       }
     },
     {
@@ -29,4 +27,3 @@
     }
   ]
 }
-
