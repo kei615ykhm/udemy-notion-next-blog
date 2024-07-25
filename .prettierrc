@@ -11,11 +11,22 @@
   "parser": "typescript",
   "overrides": [
     {
-      "files": "pages/**/*.tsx",
+      "files": "*.tsx",
       "options": {
         "semi": true,
         "singleQuote": false
       }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "parser": "json",
+        "semi": false,
+        "singleQuote": false,
+        "tabWidth": 2,
+        "trailingComma": "none"
+      }
     }
   ]
 }
+
