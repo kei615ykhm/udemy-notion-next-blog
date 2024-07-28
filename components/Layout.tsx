@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-const layout = () => {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className='relative overflow-hidden'>
       <div className='flex flex-col items-center max-w-2xl w-full mx-auto'>
@@ -88,4 +88,4 @@ const layout = () => {
   );
 };
 
-export default layout;
+export default Layout;
